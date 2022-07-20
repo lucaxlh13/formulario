@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    
     <title>Formulario</title>
 </head>
 <body>
-
-
 
 <div class="container" >
     <div class="card" >  
         
         <p>SE INSCREVA NO NOSSO PROGRAMA DE DESENVOLVEDOR !</p>
     
-        Nome: <input class="input" type="text"> Sobrenome: <input class="input" type="text"><br>
-        Idade: <input class="input" type="number"> Email: <input class="input" type="email" placeholder="Email@provedor.com" ><br>
+        Nome: <input class="input" type="text" id="nome_input" > 
+        Sobrenome: <input class="input" type="text" id="sobrenome_input" ><br>
+        Idade: <input class="input" type="number" id="idade_input" > 
+        Email: <input class="input" type="email" placeholder="Email@provedor.com" id="email_input" ><br>
         <br>
         Você se considera um Dev:<br>
         <br>
@@ -59,14 +60,30 @@
 
         <br>
 
-        <button class="botao" >Se Candidatar</button>
+        <button class="botao" onclick="enviar()" >Se Candidatar</button>
         
     </div>
 </div>
 
-    <div class="slogan">
-    <img src="Transforme%20a%20sua%20carreira%20com%20n%C3%B3s%20que%20acreditamos%20e%20apoiamos%20sua%20caminhada%20ao%20sucesso%20profissional%20!%20(1).png" alt="">
-</div>
-
 </body>
 </html>
+
+<script>
+
+function enviar() {
+
+var nomeVar = nome_input.value;
+var sobrenomeVar = sobrenome_input.value;
+var idadeVar = idade_input.value;
+var emailVar = email_input.value;
+
+
+if (nomeVar == "" || sobrenomeVar == "" || idadeVar == "" || emailVar== "") {
+
+    alert("Atenção tem campos em Branco");
+
+}
+
+}
+
+</script>
